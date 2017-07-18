@@ -1,1 +1,10 @@
 title: Fernando Villarreal
+
+gems:
+  - jekyll-seo-tag
+  
+gems:
+  - jekyll-sitemap
+  
+twitter:
+  username: fervillarrealm

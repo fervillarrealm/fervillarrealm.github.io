@@ -1,15 +1,21 @@
+
 $(function () {
+
+    
+    
+
 
     $.ajaxSetup({cache: true});
 
     // Get repositories from the GitHub API.
     if ($('#projects').length) {
-        $.getJSON('https://api.github.com/users/jnrbsn/repos?callback=?', function (repos) {
+        $.getJSON('https://api.github.com/users/fervillarrealm/repos?callback=?', function (repos) {
             var i, repoCount = repos.data.length, now = Date.now(),
                 projectsActive = document.getElementById('projects-active'),
-                projectsOlder = document.getElementById('projects-older'),
-                $projects = $('#projects'), $projectsLoading = $('#projects-loading'),
-                dt, dd, link, meta;
+                
+                $projects = $('#projects'), $projectsLoading = $('#projects-loading'), $proyectosLista = $('#proyectos-lista'),
+                dt, dd, link, meta, panel, panelBody, caption, cardDescription, cardText, pCardText, spanStars, spanForks, spanUpdated,
+                spanStarsSub, spanForksSub, spanUpdatedSub, cardImage, cardImageSub, cardTitle, cardLink, geoPattern;
 
             if (typeof repos.data.message !== 'undefined') {
                 // Handle API errors.
@@ -40,39 +46,130 @@ $(function () {
                 if (repos.data[i].fork) {
                     continue;
                 }
-
+                
                 dt = document.createElement('dt');
                 link = document.createElement('a');
                 link.innerText = repos.data[i].name;
                 link.href = repos.data[i].html_url;
                 link.target = '_blank';
                 dt.appendChild(link);
-
-                if (repos.data[i].language) {
-                    meta = document.createElement('span');
-                    meta.className = 'meta';
-                    meta.innerText = '(' + repos.data[i].language + ')';
-                    dt.appendChild(meta);
-                }
-
-                dd = document.createElement('dd');
-                dd.innerHTML = Autolinker.link(repos.data[i].description);
-
-                // Repos updated in the last year are considered active.
-                if (now - Date.parse(repos.data[i].pushed_at) < 31557600000) {
-                    projectsActive.appendChild(dt);
-                    projectsActive.appendChild(dd);
-                } else {
-                    projectsOlder.appendChild(dt);
-                    projectsOlder.appendChild(dd);
-                }
+                
+                
+                cardImage = document.createElement('div');
+                cardImage.className = "card-image geopattern";
+                
+                var patternId = document.createAttribute("data-pattern-id")
+                patternId.value = repos.data[i].name;
+                cardImage.setAttributeNode(patternId);
+                
+                cardImageSub = document.createElement('div');
+                cardImageSub.className = "card-image-cell";
+                
+                cardTitle = document.createElement('h3');
+                cardTitle.className = "card-title";
+                
+                cardLink = document.createElement('a');
+                cardLink.innerText = repos.data[i].name;
+                cardLink.href = repos.data[i].html_url;
+                cardLink.target = '_blank';
+                
+                cardTitle.appendChild(cardLink);
+                cardImageSub.appendChild(cardTitle);
+                cardImage.appendChild(cardImageSub);
+                
+                caption = document.createElement('div');
+                caption.className = "caption";
+                cardDescription = document.createElement('div');
+                cardDescription.className = "card-description";
+                cardText = document.createElement('div');
+                cardText.className = "card-text";
+                pCardText = document.createElement('p');
+                pCardText.className = "card-text";
+                spanStars = document.createElement('span');
+                spanForks = document.createElement('span');
+                spanUpdated = document.createElement('span');
+                
+                var attStars = document.createAttribute("data-toggle")
+                attStars.value = "tooltip";
+                var attForks = document.createAttribute("data-toggle")
+                attForks.value = "tooltip";
+                var attUpdated = document.createAttribute("data-toggle")
+                attUpdated.value = "tooltip";
+                
+                spanStars.setAttributeNode(attStars);
+                spanStars.className = "meta-info";
+                spanStars.title = repos.data[i].stargazers_count + " stars";
+                
+                spanForks.setAttributeNode(attForks);
+                spanForks.className = "meta-info";
+                spanForks.title = repos.data[i].forks + " forks";
+                
+                spanForksSub = document.createElement('span');
+                spanForksSub.className = "fa fa-code-fork";
+                spanForksSub.innerHTML = " " + repos.data[i].forks;
+                
+                spanUpdated.setAttributeNode(attUpdated);
+                spanUpdated.className = "meta-info";
+                spanUpdated.title = "Last updated：" + repos.data[i].updated_at;
+                
+                spanStarsSub = document.createElement('span');
+                spanStarsSub.className = "fa fa-star";
+                spanStarsSub.innerHTML = " " + repos.data[i].stargazers_count;
+                
+                spanUpdatedSub = document.createElement('span');
+                spanUpdatedSub.className = "fa fa-clock-o";
+                spanUpdatedSub.innerHTML = " " + formatDate(repos.data[i].updated_at);
+                
+                spanStars.appendChild(spanStarsSub);
+                spanUpdated.appendChild(spanUpdatedSub);
+                spanForks.appendChild(spanForksSub);
+                
+                cardText.appendChild(spanStars);
+                cardText.appendChild(spanForks);
+                cardText.appendChild(spanUpdated);
+                
+                
+                panel = document.createElement('div');
+                panel.className = "col-md-6 card text-center";
+                
+                panelBody = document.createElement('div');
+                panelBody.className = "thumbnail";
+                
+                panel.append(panelBody);
+                
+                pCardText.append(repos.data[i].description + " (" + repos.data[i].language + ")");;
+                cardDescription.appendChild(pCardText);
+                
+                caption.appendChild(cardDescription);
+                caption.appendChild(cardText);
+                
+                panelBody.appendChild(cardImage);
+                panelBody.appendChild(caption);
+                
+                $proyectosLista.append(panel);
             }
 
             $projects.slideDown(200);
             $projectsLoading.fadeOut(200);
             $projects.fadeTo(200, 1);
+            
         });
+        
+        
+
+        setTimeout(function (){
+            
+            $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+            
+            $('.geopattern').each(function(){
+                console.log($(this).geopattern($(this)));
+                $(this).geopattern($(this).data('pattern-id'));
+            }); 
+        }, 800);
+        
     }
+    
+    
 
     // Fix scrolling issue on Mobile Safari.
     if ($(window).width() < 768) {
@@ -91,3 +188,75 @@ $(function () {
     })();
 
 });
+
+
+function formatDate (jsonDate) {
+
+    if (jsonDate == null) return "";
+    if (jsonDate.length == 0) return "";
+
+    var date = new Date(parseInt(jsonDate.substr(6)));
+
+    var monthOfYear = parseInt(date.getMonth() + 1);
+    var dayOfMonth = parseInt(date.getDate());
+
+    if (monthOfYear < 10)
+        monthOfYear = "0" + monthOfYear;
+
+    if (dayOfMonth < 10)
+        dayOfMonth = "0" + dayOfMonth;
+
+    var output = monthOfYear + "/" + dayOfMonth + "/" + date.getFullYear();
+    return output;
+}
+
+
+
+$(function (){
+   $('a[href*=#]').on('click', function(e)
+	{
+		e.preventDefault();
+		
+		if( $( $.attr(this, 'href') ).length > 0 )
+		{
+			$('html, body').animate(
+			{
+				scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 400);
+		}
+		return false;
+	}); 
+	
+	$('#navbar-example').on('activate.bs.scrollspy', function() 
+	{
+		window.location.hash = $('.nav .active a').attr('href').replace('#', '#/');
+	});
+	
+	lnStickyNavigation = $('.scroll-down').offset().top + 20;
+	
+	$(window).on('scroll', function() 
+	{  
+		stickyNavigation();  
+	});  
+	
+	$('.navbar li a').click(function(event) 
+	{
+		$('.navbar-collapse').removeClass('in').addClass('collapse');
+	});
+	
+	stickyNavigation();
+});
+
+var lnStickyNavigation;
+
+function stickyNavigation()
+{         
+	if($(window).scrollTop() > lnStickyNavigation) 
+	{   
+		$('body').addClass('fixed');  
+	} 
+	else 
+	{  
+		$('body').removeClass('fixed');   
+	}  
+}
