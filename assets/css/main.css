@@ -375,3 +375,8 @@ td.score span { margin-left: 2px; }
 td.score:hover span {
     margin-left: 2px;
 }
+
+
+.top-buffer {
+    margin-top: 30px;
+}
