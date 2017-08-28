@@ -1,9 +1,6 @@
 
 $(function () {
 
-    
-    
-
 
     $.ajaxSetup({cache: true});
 

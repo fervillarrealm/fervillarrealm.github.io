@@ -1,11 +1,954 @@
 ---
-layout: default3
-title: index3
+layout: default
+title: index
+birth_date: 22/03/1984
 ---
-
-
-<p>This site is powered by <a href="http://jekyllrb.com/">Jekyll</a> and hosted on
-<a href="https://pages.github.com/">GitHub Pages</a>. The source code for this site is publicly available
-<a href="https://github.com/jnrbsn/jnrbsn.com">on GitHub</a>. Any opinions on this site are mine alone.</p>
-
+<!-- Section Perfil -->
+    <section id="perfil">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title">
+                        <h1>Perfil</h1>
+                        <p class="lead" >"Una aplicación hace lo que le digas que haga, no lo que quieras que haga."</p>
+                        <p class="lead">-Desconocido</p>
+                    </div><!-- title -->
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 text-justify">
+                            <h3>Sobre mí</h3>
+                            <p>
+                                Programador Sr. con buen conocimiento y técnicas de front-end y back-end. 
+                                Me apasiona la arquitectura de aplicaciones, el cómo mejorar el código para que éste
+                                sea claro y limpio.
+                            </p>
+                            <p>
+                                Soy de la idea de aprender distintas tecnologías y no atarse a una sola.
+                                No por el hecho de saberlo todo, si no, el facilitar y encontrar una solución viable 
+                                para un determinado problema o proyecto.
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify">
+                            <div class="gravatar"></div>
+                            <p>
+                                Casado con Microsoft, enamorado de Linux y divorciado de iOS. 
+                                Distro favorita: <a href="https://getfedora.org/">Fedora</a>. 
+                                Obsesionado con la indentación de código. (una método de más de 10 líneas es inaceptable).
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify">
+                            <h3>Detalles</h3>
+                                <h4>Nombre:</h4>
+                                <span>Fernando Villarreal</span>
+                                <h4 id="edad">Edad:</h4>
+                                <span>{{ site.time | date: '%Y' | minus:1984 }} años</span>
+                                <h4>Más:</h4>
+                                <p>
+                                    <p>Originario de la ciudad de las montañas; Monterrey Nuevo Léon, 
+                                    amante de los perros y <a href="http:\\www.packers.com">Packer</a> 
+                                    desde los tiempos de Brett Favre.</p>
+                                </p>
+                        </div><!-- col-md-4 -->
+                    </div><!-- .row -->
+                </div><!-- col-md-8 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>
+    
+    <!-- Section Experiencia -->
+    <section id="experiencia">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title">
+                        <h1>Experiencia</h1>
+                        <p class="lead" >"La experiencia es simplemente el nombre que le damos a nuestros errores."</p>
+                        <p class="lead">-Oscar Wilde</p>
+                    </div><!-- title -->
+                    <hr>
+                    <h3>Educación</h3>
+                    <div class="row top-buffer" id="educacion-01">
+                        <div class="col-md-4">
+                            <h4>Universidad del Valle de México</h4>
+                            <span>Marzo 2013 - Presente</span>
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Ing. Industrial y de Sistemas</h5>
+                            Segunda Ingeniería, en la modalidad ejecutiva presencial, me gustó el plan de estudios, 
+                            más que fierros y demás, me atrajo el enfoque que se tiene en la parte de negocios,
+                            evaluación de proyectos, finanzas, etc.
+                            <br/>
+                            <a href="https://www.universidaduvm.mx/campus-cumbres">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                Uvm Campus Cumbres
+                            </a>
+                        </div><!-- col-md-8 -->
+                    </div><!-- educacion-01 -->
+                    
+                    <div class="row top-buffer" id="educacion-02">
+                        <div class="col-md-4">
+                            <h4>Universidad Autónima de Nuevo León</h4>
+                            <span>Septiembre 2010 - Diciembre 2015</span>
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Ing. en Electrónica y Comunicaciones</h5>
+                            Alcancé el nuevo plan de estudios, llevando el 30% de mis materias en inglés.
+                            Ciertamente no salí ejerciendo mi carrera, pero algo aprendí.
+                            <br/>
+                            <a href="http://www.fime.uanl.mx/">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                FIME
+                            </a>
+                        </div><!-- .row -->
+                    </div><!-- educacion-02 -->
+                    
+                    <hr>
+                    <h3>Experiencia</h3>
+                    
+                    <div class="row top-buffer" id="experiencia-01">
+                        <div class="col-md-4">
+                            <h4>Financiera Realidad S.A. de C.V. SOFOM E.N.R.</h4>
+                            <span>Mayo 2011 - Presente</span>
+                            <strong><span>({{ site.time | date: '%Y' | minus:2011 }} años)</span></strong> 
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Programador Senior</h5>
+                            <p class="text-justify">
+                                Se vió en la necesidad de ya no depender de un proveedor de software para el manejo de la operación, por ese motivo
+                                 se compró un sistema hecho en Asp.net (clásico) con nHibernate, string.net y controles de Infragistics. 
+                                 El cual tuve la oportunidad de recibir (entrega de código fuente y pequeña capacitación).
+                                 A la fecha, se le han realizado más de 24 mejoras o versiones. A la par, se está trabajando para migrar ésta aplicación 
+                                 migrarlo a <strong>SEAN (Sql, Express, Angular, Node)</strong> en lugar de <a href="http://mean.io/">MEAN</a>.
+                            </p>
+                            <p class="text-justify">
+                                A raíz de la experiencia que me dió el trabajar con ésta aplicación, desarrollé varios sistemas, 
+                                entre ellos:
+                            </p>
+                            <ul class="list-unstyled list-detail">
+                                <li>
+                                    HelpDesk para solicitud de requerimientos de los usuarios (Asp.Net clásico, nHibernate, SQL Server, etc.).
+                                </li>
+                                <li>
+                                    Prevención de Lavado de Dinero (PHP ,Laravel y SQL Server).
+                                </li>
+                                <li>
+                                    Control de archivo y documento muerto (WinForms .Net 4.5, SQL Server y controles de DevExpress).
+                                </li>
+                                <li>
+                                    Control y administración de gastos (MVC5 .Net, SQL Server, EF).
+                                </li>
+                                <li>
+                                    Fintech (MVC5 .Net, SQL Server, EF, Knockout.js).
+                                </li>
+                            </ul>
+                            <p>
+                                Todos ellos utilizando el patrón de "n" capas, inyección de dependencias e inversión de control, 
+                                WebApi's, creando la estructura de base de datos, así como la seguridad.
+                            </p>
+                            <a href="https://www.finreal.com.mx">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                Financiera Realidad
+                            </a>
+                        </div><!-- .row -->
+                    </div><!-- experiencia-01 -->
+                    <div class="row top-buffer" id="experiencia-02">
+                        <div class="col-md-4">
+                            <h4>Financiera Realidad S.A. de C.V. SOFOM E.N.R.</h4>
+                            <span>Septiembre 2008 - Mayo 2011</span>
+                            <strong><span>(3 años)</span></strong>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Administrador de Sistemas</h4>
+                            <p>
+                                Estuve a cargo de administrar los diversos sistemas que se tenían para la operación, algunos de ellos fueron 
+                                <a href="https://www.temenos.com">Globus T24</a> (core propietario y con COBOL), <a href="http://siac.com.mx">SIAC</a> (Java & Sql Server creo).
+                                Participé como intermediario con éstos proveedores de software para su implementación, haciendo grupos de análisis y casos de uso. 
+                                También me encargué de la migración del "sistema" que se tenía entonces en Excel, generando y estructurando archivos .csv para su carga.
+                            </p>
+                            <p>
+                                Comencé mis primeros pininos en la programada creando scripts en Bash y .Bat's para automatización de respaldos y deploy de versiones de los sistemas (aún no utilizabamos algún manejador como jenkins).
+                                 Después hize un par de aplicaciones con Windows Forms utilizando ADO.Net sólo para consultar información de las bases de datos y obtener reportes que solicitaban las diversas áreas o departamentos.
+                            </p>
+                            <a href="https://www.finreal.com.mx">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                Financiera Realidad
+                            </a>
+                        </div><!-- .row -->
+                    </div><!-- experiencia-02 -->
+                    
+                    <div class="row top-buffer" id="experiencia-03">
+                        <div class="col-md-4">
+                            <h4>Salud Dental S.A, de C.V.</h4>
+                            <span>Enero 2006 - Septiembre 2008</span>
+                            <strong><span>(2 años)</span></strong>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Administrador de Sistemas</h4>
+                            <p>
+                                Reponsable de soporte, realizaba instalación de redes (pequeñas) en locales de la empresa en los diversos municipios de la cd. de Monterrey.
+                            </p>
+                            <p>
+                                Daba soporte en general a PC's, Impresoras y orientaba a los usuarios para el uso correcto del sistema.
+                            </p>
+                            <a href="http://www.imagendental.com/">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                Salud Dental (ahora Imagen Dental)
+                            </a>
+                        </div><!-- .row -->
+                    </div><!-- experiencia-03 -->
+                    
+                    
+                </div><!-- col-md-10 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- experiencia -->
+    
+    
+    <section id="habilidades">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title">
+                        <h1>Habilidades</h1>
+                        <p class="lead" >"Programa siempre como si la persona que termina dándole mantenimiento a tu código sea un psicópata loco que sepa donde vives."</p>
+                        <p class="lead">-Martin Golding</p>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Tecnologías de Microsoft</h4>
+                            <table id="conocimientoMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            ASP.Net Clásico C#
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            ASP.Net MVC C#
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            Winforms C#
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Base de Datos</h4>
+                            <table id="dbMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            MS SQL Server
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Cloud Services</h4>
+                            <table id="cloudMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Microsoft Azure
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>ORM & Lib</h4>
+                            <table id="ormMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            ADO.Net Entity Framework
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            MS Enterprise Library (Enlib)
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Controles de 3eros</h4>
+                            <table id="controlesMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Infragistics
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Telerik
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            DevExpress
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Servidor Web</h4>
+                            <table id="webServerMicrosoft" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            IIS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Owin
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div><!-- col-md-6 -->
+                        
+                        <div class="col-md-6">
+                            <h4>Tecnologías OpenSource</h4>
+                            <table id="conocimientoOS" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Laravel PHP
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            AngularJS 2 Typescript
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            ReactJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Express Jade
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ruby Ruby on Rails
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Java
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            Python Django
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Cloud Services</h4>
+                            <table id="cloudOS" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Heroku
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Servidores Web</h4>
+                            <table id="webServerOS" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Apache
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            NodeJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Nginx
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Base de Datos</h4>
+                            <table id="dbOS" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            MySQL
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            PostgreSQL
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            MongoDB
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Firebird
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div><!-- col-md-6 -->
+                        
+                    </div><!-- row -->
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <h4>Programador de Tareas</h4>
+                            <table id="tareas" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            GulpJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star "></span>
+                                            <span class="glyphicon glyphicon-star "></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            GruntJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table><!-- table -->
+                            
+                            <h4>Control de Versiones</h4>
+                            <table id="controlVersiones" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Git
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Svn
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star "></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Deploy</h4>
+                            <table id="deploy" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Jenkins
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div><!-- col-md-6 -->
+                            
+                        <div class="col-md-6">
+                            <h4>Librerías (en su mayoría Javascript)</h4>
+                            <table id="lib" class="table table-hover borderless">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Bootstrap
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Jquery
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Ajax
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            KnockoutJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            RequireJS
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Browserify
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Backbone
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-7">
+                                            Underscore
+                                        </td>
+                                        <td class="score">
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star filled"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div><!-- col-md-6 -->
+                        
+                    </div><!-- row -->
+                </div><!-- col-md-10 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- habilidades -->
+    
+    <section id="proyectos">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title">
+                        <h1>Proyectos</h1>
+                        <p class="lead" >"La vida sería mucho más fácil si tuvieramos el código fuente."</p>
+                        <p class="lead">-Desconocido</p>
+                    </div>
+                    <hr>
+                     <div class="row">
+                        <div class="col-md-12">
+                            <div id="projects-loading"><i class="icon-spin3 animate-spin"></i></div>
+                            <div id="proyectos-lista"></div>
+                            <div id="projects">
+                            
+                                <p id="projects-active">
+                                    
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- .row -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>
+                                Éste listado es generado usando el API de Github. 
+                                Puedes dar click en el nombre del repositorio para ver, descargar, o ver la documentación del proyecto. 
+                                También puedes ver mi perfil de Github en: <a href="https://github.com/fervillarrealm">github.com/fervillarrealm</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- col-md-10 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- proyectos -->
+    
+    <section id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title">
+                        <h1>Contacto</h1>
+                        <p class="lead" >"Primero resuelve el problema, después escribe el código."</p>
+                        <p class="lead">-John Johnson</p>
+                    </div>
+                    <hr>
+                     
+                        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center social-footer">
+                <p>Puedes encontrarme en una variedad de lugares en la web:</p>
+                <p class="social">
+                    <a href="https://github.com/fervillarrealm" title="Fork me on GitHub"><i class="icon-github-circled"></i></a>
+                    <a href="https://twitter.com/fervillarrealm" title="Follow me on Twitter"><i class="icon-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/fervillarrealm" title="Connect with me on LinkedIn"><i class="icon-linkedin-squared"></i></a>
+                    <a href="https://stackoverflow.com/users/7983496/fernando-villarreal" title="Ask me stuff on Stack Overflow"><i class="icon-stackoverflow"></i></a>
+                    <a href="mailto:fer.villarreal@gmail.com" title="Email me"><i class="icon-gmail"></i></a>
+                </p><!-- .social -->
+            </div><!-- col-md-10 -->
+        </div><!-- .row -->
+                    
+                </div><!-- col-md-10 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section><!-- contacto -->
 
