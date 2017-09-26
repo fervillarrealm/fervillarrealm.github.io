@@ -26,7 +26,7 @@ $(function () {
                 return;
             }
 
-            // Sort by forks + stargazers, then by date.
+            // Filtrar por forks, estrellas y fecha
             repos.data.sort(function (repoA, repoB) {
                 var networkRepoA = repoA.forks_count + repoA.stargazers_count,
                     networkRepoB = repoB.forks_count + repoB.stargazers_count,
@@ -153,13 +153,12 @@ $(function () {
         });
         
         
-
         setTimeout(function (){
             
             $("body").tooltip({ selector: '[data-toggle=tooltip]' });
             
             $('.geopattern').each(function(){
-                console.log($(this).geopattern($(this)));
+                //console.log($(this).geopattern($(this)));
                 $(this).geopattern($(this).data('pattern-id'));
             }); 
         }, 800);
@@ -186,24 +185,23 @@ $(function () {
 
 });
 
-
 function formatDate (jsonDate) {
 
+    var subDate = jsonDate.replace('-','').replace('-','').substring(0,8);
     if (jsonDate == null) return "";
     if (jsonDate.length == 0) return "";
 
-    var date = new Date(parseInt(jsonDate.substr(6)));
-
-    var monthOfYear = parseInt(date.getMonth() + 1);
-    var dayOfMonth = parseInt(date.getDate());
-
+    var monthOfYear = parseInt(subDate.substring(4,6));
+    var dayOfMonth = parseInt(subDate.substring(6,8));
+    var year = parseInt(subDate.substring(0,4));
+    
     if (monthOfYear < 10)
         monthOfYear = "0" + monthOfYear;
 
     if (dayOfMonth < 10)
         dayOfMonth = "0" + dayOfMonth;
 
-    var output = monthOfYear + "/" + dayOfMonth + "/" + date.getFullYear();
+    var output = monthOfYear + "/" + dayOfMonth + "/" + year;
     return output;
 }
 
