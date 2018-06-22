@@ -1,0 +1,54 @@
+<!-- Section Profile -->
+    <section id="profile">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title wow zoomIn">
+                        <h1>Profile</h1>
+                        <p class="lead" >"When debugging, novices insert corrective code; experts remove defective code."</p>
+                        <p class="lead">-Richard Pattis</p>
+                    </div><!-- title -->
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 text-justify wow fadeIn">
+                            <h3>About me</h3>
+                            <p>
+                                Over {{ site.time | date: '%Y' | minus:2011 }} years of experience in software development 
+                                working with diverse technologies. 
+                                Using design patterns, TDD and SOLID principles, and good knowledge of back-end and front-end techniques.
+                                I'm passionate about software architecture.
+                            </p>
+                            <p>
+                                I'm always learning new technologies and programming languages, 
+                                not because of knowing everything, if not, to facilitate and find a viable solution for a 
+                                particular problem or project.
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify">
+                            <div class="gravatar"></div>
+                            <p class="wow fadeIn">
+                                Married to Microsoft, in love with Linux and divorced from iOS.
+                            </p>
+                            <p class="wow fadeIn">
+                                Favorite distro: <a href="https://getfedora.org/">Fedora</a>. 
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify wow fadeIn">
+                            <h3>Details</h3>
+                                <h4>Name:</h4>
+                                <span>Fernando Villarreal</span>
+                                <h4 id="edad">Age:</h4>
+                                <span>{{ site.time | date: '%Y' | minus:1984 }} years</span>
+                                <h4>More:</h4>
+                                <p>
+                                    <p>
+                                        I currently reside in the city of Monterrey, Nuevo León.
+                                        Dog lover and <a href="http:\\www.packers.com">Packer</a> fan since the Brett Favre days.
+                                    </p>
+                                </p>
+                        </div><!-- col-md-4 -->
+                    </div><!-- .row -->
+                </div><!-- col-md-8 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>

@@ -127,7 +127,9 @@ $(function () {
                 
                 
                 panel = document.createElement('div');
-                panel.className = "col-md-6 card text-center";
+                panel.className = (i % 2 == 0) 
+                    ? "col-md-6 card text-center wow bounceInLeft" 
+                    : "col-md-6 card text-center wow bounceInRight";
                 
                 panelBody = document.createElement('div');
                 panelBody.className = "thumbnail";
@@ -201,7 +203,7 @@ function formatDate (jsonDate) {
     if (dayOfMonth < 10)
         dayOfMonth = "0" + dayOfMonth;
 
-    var output = monthOfYear + "/" + dayOfMonth + "/" + year;
+    var output = dayOfMonth + "/" + monthOfYear + "/" + year;
     return output;
 }
 

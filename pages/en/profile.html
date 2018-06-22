@@ -1,0 +1,52 @@
+<!-- Section Perfil -->
+    <section id="perfil">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="title wow zoomIn">
+                        <h1>Perfil</h1>
+                        <p class="lead" >"A computer program does what you tell it to do, not what you want it to do."</p>
+                        <p class="lead">-Unknown</p>
+                    </div><!-- title -->
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 text-justify wow fadeIn">
+                            <h3>About me</h3>
+                            <p>
+                                Cuento con más de {{ site.time | date: '%Y' | minus:2011 }} años de experiencia desarrollando aplicaciones con diversas tecnologías. 
+                                Utilizando patrones de diseño, desarrollo orientado a pruebas (TDD), con buen conocimiento y técnicas de front-end y back-end. 
+                                Me apasiona la arquitectura de aplicaciones.
+                            </p>
+                            <p>
+                                Soy de la idea de aprender distintas tecnologías y no atarse a una sola.
+                                No por el hecho de saberlo todo, si no, el facilitar y encontrar una solución viable 
+                                para un determinado problema o proyecto.
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify">
+                            <div class="gravatar"></div>
+                            <p class="wow fadeIn">
+                                Married to Microsoft, in love with Linux and divorced from iOS. 
+                            </p>
+                            <p class="wow fadeIn">
+                                Favorite distro: <a href="https://getfedora.org/">Fedora</a>. 
+                                Obsesionado con la indentación de código. (una método de más de 10 líneas es inaceptable).
+                            </p>
+                        </div><!-- col-md-4 -->
+                        <div class="col-md-4 text-justify wow fadeIn">
+                            <h3>Details</h3>
+                                <h4>Name:</h4>
+                                <span>Fernando Villarreal</span>
+                                <h4 id="edad">Age:</h4>
+                                <span>{{ site.time | date: '%Y' | minus:1984 }} años</span>
+                                <h4>More:</h4>
+                                <p>
+                                    <p>Originario de la ciudad de las montañas; Monterrey Nuevo Léon, 
+                                    dog lover and <a href="http:\\www.packers.com">Packer</a>  fan since the Brett Favre days.
+                                </p>
+                        </div><!-- col-md-4 -->
+                    </div><!-- .row -->
+                </div><!-- col-md-8 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>
