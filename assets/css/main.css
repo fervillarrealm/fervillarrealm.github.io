@@ -656,3 +656,61 @@ img.imgTech {
     top:0;
     right: 30px;
 }
+
+ @media (max-width: 768px)  {
+    body {
+        font-size: .9em !important; 
+    }
+    
+    ul.list-detail li {
+        font-size: .9em !important;
+    }
+    
+    #experience .card {
+        padding: 15px 5px;
+    }
+    
+    .principal span.border,
+    #typed {
+        font-size: .6em;
+    }
+    
+    #experience-01 h5, #experience-02 h5, #experience-03 h5, #education-01 h5, #education-02 h5 {
+        font-size: 1.2em;
+    }
+    
+    h3.card-title {
+        font-size: 1.3em;
+    }
+    
+    .card-image {
+        height: 80px;
+    }
+    
+    section h1 {
+        font-size: 2.3em;
+    }
+    
+    .navbar {
+        width: 100%;
+    }
+    
+    .fixed .navbar {
+        top: 0;
+    }
+    
+    .navbar .nav > li a {
+        padding: 10px;
+        height: 40px;
+    }
+    
+    .navbar .nav > li {
+        height: 40px;
+    }
+    
+    .gravatar {
+        background-size: 170px 170px;
+        height: 180px;
+        width: 180px;
+    }
+}
