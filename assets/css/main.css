@@ -624,6 +624,13 @@ td.score span {
     left: 70px;
 }
 
+#resume {
+    width: 40px;
+    bottom: 10px;
+    left: 10px;
+    border: none !important;
+}
+
 .particles-js-canvas-el {
     position: absolute;
     top: 0;
