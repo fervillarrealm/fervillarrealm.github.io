@@ -173,7 +173,7 @@ div.title.wow.zoomIn p.lead:nth-child(even) {
     top: 4px;
     margin-left: .1em;
     margin-right: .1em;
-    -webkit-font-smoot
+    
 }
 
 .social .icon-codewars2 {
@@ -196,6 +196,23 @@ div.title.wow.zoomIn p.lead:nth-child(even) {
     color: #e93e30;
     font-size: .9em;
     margin-right: .3em;
+}
+
+.social .icon-freecodecamp:before {
+    color: #00aeef;
+}
+
+.social .icon-freecodecamp {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 35px;
+    height: 37px;
+    background: url('../img/freecodecamp.jpeg');
+    background-size: 35px 37px;
+    position: relative;
+    top: 4px;
+    margin-left: .1em;
+    margin-right: .1em;
 }
 
 .social-footer p{
@@ -664,6 +681,28 @@ img.imgTech {
     right: 30px;
 }
 
+#certificate-algorithms {
+    background-image: url('../img/algorithms.png');
+    display: block;
+      margin: 0 auto;
+      text-indent: -9999px;
+      width: 100%;
+      height: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+}
+#certificate-algorithms:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#udemy-rest {
+    background-image: url('../img/udemy-rest.jpg');
+    width: "100%";
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
  @media (max-width: 768px)  {
     body {
         font-size: .9em !important; 
@@ -719,5 +758,9 @@ img.imgTech {
         background-size: 170px 170px;
         height: 180px;
         width: 180px;
+    }
+    
+    #certificate-algorithms {
+        height: 220px;
     }
 }
